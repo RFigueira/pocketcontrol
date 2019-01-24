@@ -134,7 +134,7 @@
         </dependency>
     </dependencies>
     <build>
-        <finalName>avaliacao</finalName>
+        <finalName>pocketcontrol</finalName>
         <plugins>
             <plugin>
                 <groupId>org.flywaydb</groupId>
