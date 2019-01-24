@@ -1,0 +1,26 @@
+<persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd"
+	version="2.1">
+
+	<persistence-unit name="br.com.codepampa_pocketcontrolPU" transaction-type="RESOURCE_LOCAL">
+	
+		<provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+
+		<properties>
+			<!-- Exemplo de conexão ao banco de dados PostgreSQL -->
+			<property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver" />
+			<property name="javax.persistence.jdbc.url" value="jdbc:postgresql://localhost:5432/pocketcontrol" />
+			<property name="javax.persistence.jdbc.user" value="postgres" />
+			<property name="javax.persistence.jdbc.password" value="postgres" />
+			<property name="hibernate.show_sql" value="true" />
+			<property name="hibernate.hbm2ddl.auto" value="update" />
+			<!--  c3p0 pool de conexoes -->
+			<property name="c3p0.min_size" value="5"/>
+			<property name="c3p0.max_size" value="50"/>
+			<property name="c3p0.timeout" value="300"/>
+			<property name="c3p0.max_statements" value="50"/>
+			<property name="c3p0.idle_test_period" value="300"/>
+		</properties>
+	</persistence-unit>
+</persistence>
